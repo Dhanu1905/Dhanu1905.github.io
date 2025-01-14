@@ -1,77 +1,29 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background: #f7e9ff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    color: #8e44ad;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: #8e44ad;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.btn:hover {
-    background: #732d91;
-}
-
-.animation-container {
-    position: relative;
-    height: 200px;
-}
-
+/* Add balloon colors dynamically */
 .balloon {
     width: 50px;
     height: 70px;
-    background: #ff6f61;
-    border-radius: 50%;
     position: absolute;
-    animation: float 4s infinite;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff6f61, #ff9980);
+    animation: float 5s infinite ease-in-out;
 }
 
-.balloon:nth-child(2) {
-    left: 50%;
-    background: #ffa631;
-    animation-delay: 1s;
+/* Updated animations */
+.confetti {
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    animation: fall 3s infinite;
+    background: linear-gradient(to bottom, #ff6f61, #ffa631);
 }
 
-.balloon:nth-child(3) {
-    left: 75%;
-    background: #f9dd51;
-    animation-delay: 2s;
+/* Cool animation for buttons */
+.btn {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px #ff6f61;
 }
-
-@keyframes float {
-    0% {
-        transform: translateY(100px);
-    }
-    50% {
-        transform: translateY(-50px);
-    }
-    100% {
-        transform: translateY(100px);
-    }
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-gallery img {
-    width: 100px;
-    height: auto;
-    border-radius: 10px;
+.btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: linear-gradient(to left, #ffa631, #ff6f61);
+    box-shadow: 0 0 30px #ffa631;
 }
